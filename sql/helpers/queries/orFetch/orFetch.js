@@ -38,7 +38,7 @@ module.exports = {
 						return query;
 					},
 					expectedResults: {
-						sql: 'SELECT * FROM Products ORDER BY ProductName ASC OFFSET 30 ROWS FETCH NEXT 10 ROWS ONLY',
+						sql: 'SELECT * FROM Products ORDER BY ProductName ASC FETCH NEXT 10 ROWS ONLY',
 						values: {}
 					}
 				}

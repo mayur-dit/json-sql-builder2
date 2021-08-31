@@ -38,7 +38,7 @@ module.exports = {
 						return query;
 					},
 					expectedResults: {
-						sql: 'SELECT * FROM dbo.[Products] ORDER BY [ProductName] ASC OFFSET 30 ROWS FETCH FIRST 10 ROWS ONLY',
+						sql: 'SELECT * FROM Products ORDER BY ProductName ASC OFFSET 30 ROWS FETCH FIRST 10 ROWS ONLY',
 						values: {}
 					}
 				}
