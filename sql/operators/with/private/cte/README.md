@@ -45,14 +45,14 @@ $cte: {
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[columns](../../../../helpers/ddl/columns/)|*optional*|:heavy_check_mark:|( [$columns])|
-[union](../../../../operators/union/)|*optional*|:heavy_check_mark:||
-[intersect](../../../../operators/intersect/)|*optional*|:heavy_check_mark:||
+[columns](helpers\ddl\columns/)|*optional*|:heavy_check_mark:|( [$columns])|
+[union](operators\union/)|*optional*|:heavy_check_mark:||
+[intersect](operators\intersect/)|*optional*|:heavy_check_mark:||
 [expect](./private/expect/)|*optional*|*private*||
-[select](../../../../operators/select/)|*optional*|:heavy_check_mark:||
-[insert](../../../../operators/insert/)|*optional*|:heavy_check_mark:||
-[update](../../../../operators/update/)|*optional*|:heavy_check_mark:||
-[delete](../../../../operators/delete/)|*optional*|:heavy_check_mark:||
+[select](operators\select/)|*optional*|:heavy_check_mark:||
+[insert](operators\insert/)|*optional*|:heavy_check_mark:||
+[update](operators\update/)|*optional*|:heavy_check_mark:||
+[delete](operators\delete/)|*optional*|:heavy_check_mark:||
 
 :bulb: **Example:**
 ```javascript

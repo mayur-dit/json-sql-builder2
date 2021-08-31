@@ -15,7 +15,8 @@ class joinHelper extends SQLBuilder.SQLHelper {
 
 		this.Keyword('LATERAL');
 
-		this.registerPrivateHelper('on', '../');
+		// this.registerPrivateHelper('on', '../');
+		this.registerPrivateHelperNew(require('./private/on/on').definition, 'on');
 
 		this.$table = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 		this.$lateral = new SQLBuilder.SQLPredefined.AcceptIfTrue(sql);

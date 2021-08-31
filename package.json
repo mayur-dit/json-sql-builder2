@@ -4,6 +4,7 @@
   "description": "Query Builder to translate JSON dataformat a SQL.",
   "main": "index.js",
   "scripts": {
+    "run-oracle-ex": "node quick-runs/OracleWhere.js",
     "test": "node lib/test.js"
   },
   "keywords": [

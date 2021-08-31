@@ -27,8 +27,10 @@ class union extends SQLBuilder.SQLOperator {
 			}
 		});
 
-		this.registerPrivateHelper('distinct');
-		this.registerPrivateHelper('all');
+		// this.registerPrivateHelper('distinct');
+		// this.registerPrivateHelper('all');
+		this.registerPrivateHelperNew(require('./private/distinct/distinct').definition, 'distinct');
+		this.registerPrivateHelperNew(require('./private/all/all').definition, 'all');
 	}
 }
 

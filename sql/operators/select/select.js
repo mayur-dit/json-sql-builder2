@@ -40,13 +40,18 @@ class select extends SQLBuilder.SQLOperator {
 
 		// Add private ANSI helpers
 		//this.registerPrivateHelper('top');
-		this.registerPrivateHelper('into');
+		// this.registerPrivateHelper('into');
+		this.registerPrivateHelperNew(require('./private/into/into').definition, 'into');
 		//this.registerPrivateHelper('from');
-		this.registerPrivateHelper('join');
-		this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('join');
+		// this.registerPrivateHelper('columns');
+		this.registerPrivateHelperNew(require('./private/join/join').definition, 'join');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
 		//this.registerPrivateHelper('where');
-		this.registerPrivateHelper('groupBy');
-		this.registerPrivateHelper('having');
+		// this.registerPrivateHelper('groupBy');
+		// this.registerPrivateHelper('having');
+		this.registerPrivateHelperNew(require('./private/groupBy/groupBy').definition, 'groupBy');
+		this.registerPrivateHelperNew(require('./private/having/having').definition, 'having');
 		//this.registerPrivateHelper('orderBy');
 
 		// Add specific Helpers depending on the current SQL-Language dialect

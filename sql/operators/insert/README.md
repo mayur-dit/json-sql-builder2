@@ -40,14 +40,14 @@ INSERT INTO{ <$table>}
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [table](./private/table/)|:heavy_check_mark:|*private*|  <$table>|
-[columns](../../helpers/ddl/columns/)|*optional*|:heavy_check_mark:| ( [$columns])|
+[columns](helpers\ddl\columns/)|*optional*|:heavy_check_mark:| ( [$columns])|
 [values](./private/values/)|*optional*|*private*| VALUES ( [$values])|
 [records](./private/records/)|*optional*|*private*| VALUES  [$records]|
-[select](../../operators/select/)|*optional*|:heavy_check_mark:|  [$select]|
+[select](operators\select/)|*optional*|:heavy_check_mark:|  [$select]|
 [documents](./private/documents/)|*optional*|*private*| [$documents]|
 [onDuplicateKeyUpdate](./private/onDuplicateKeyUpdate/)|*optional*|*private*| ON DUPLICATE KEY UPDATE  [$onDuplicateKeyUpdate]|`MariaDB` `MySQL` 
 [onConflict](./private/onConflict/)|*optional*|*private*||`PostgreSQL` 
-[returning](../../helpers/queries/returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`PostgreSQL` `Oracle` `MariaDB` 
+[returning](helpers\queries\returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`PostgreSQL` `Oracle` `MariaDB` 
 
 :bulb: **Example:**
 ```javascript

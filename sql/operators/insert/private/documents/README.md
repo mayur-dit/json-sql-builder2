@@ -88,9 +88,9 @@ function() {
             last_name: 'Doe',
             age: 40
         }, {
+            age: 35,
             first_name: 'Jane',
             last_name: 'Dan',
-            age: 35
         }]
     });
 }
@@ -165,7 +165,7 @@ VALUES
     "$1": "John",
     "$2": "Doe",
     "$3": null,
-    "$4": "2019-10-07T13:52:41.959Z"
+    "$4": "2021-08-31T08:08:41.317Z"
 }
 ```
 

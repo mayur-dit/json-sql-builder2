@@ -32,7 +32,8 @@ class createView extends SQLBuilder.SQLOperator {
 		this.$ifNotExists = this.$ine;
 		this.$securityBarrier = new SQLBuilder.SQLPredefined.AcceptIfTrue(sql);
 
-		this.registerPrivateHelper('checkOption');
+		// this.registerPrivateHelper('checkOption');
+		this.registerPrivateHelperNew(require('./private/checkOption/checkOption').definition, 'checkOption');
 	}
 }
 

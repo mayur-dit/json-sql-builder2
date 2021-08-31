@@ -42,10 +42,14 @@ class orderBy extends SQLBuilder.SQLHelper {
 			String: { syntax: this.Syntax('<value-ident> ASC') }
 		});
 
-		this.registerPrivateHelper('asc');
-		this.registerPrivateHelper('desc');
-		this.registerPrivateHelper('nullsFirst');
-		this.registerPrivateHelper('nullsLast');
+		// this.registerPrivateHelper('asc');
+		// this.registerPrivateHelper('desc');
+		// this.registerPrivateHelper('nullsFirst');
+		// this.registerPrivateHelper('nullsLast');
+		this.registerPrivateHelperNew(require('./private/asc/asc').definition, 'asc');
+		this.registerPrivateHelperNew(require('./private/desc/desc').definition, 'desc');
+		this.registerPrivateHelperNew(require('./private/nullsFirst/nullsFirst').definition, 'nullsFirst');
+		this.registerPrivateHelperNew(require('./private/nullsLast/nullsLast').definition, 'nullsLast');
 	}
 }
 

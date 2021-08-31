@@ -21,7 +21,8 @@ class cmp extends SQLBuilder.SQLHelper {
 			Object: { syntax: this.Syntax('{<$value> }<$comparator>{ <$other>}', SQLBuilder.CALLEE) }
 		});
 
-		this.registerPrivateHelper('comparator');
+		// this.registerPrivateHelper('comparator');
+		this.registerPrivateHelperNew(require('./private/comparator/comparator').definition, 'comparator');
 
 		//this.$value = new SQLBuilder.SQLPredefined.PrimitiveValueParam(sql);
 		//this.$other = new SQLBuilder.SQLPredefined.PrimitiveValueParam(sql);

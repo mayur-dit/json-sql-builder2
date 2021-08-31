@@ -72,7 +72,8 @@ class update extends SQLBuilder.SQLOperator {
 
 		this.$table = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 
-		this.registerPrivateHelper('set');
+		// this.registerPrivateHelper('set');
+		this.registerPrivateHelperNew(require('./private/set/set').definition, 'set');
 	}
 }
 

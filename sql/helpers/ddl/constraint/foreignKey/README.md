@@ -85,8 +85,8 @@ FOREIGN KEY (<$columns>) <$references>
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[columns](../../../../helpers/ddl/columns/)|:heavy_check_mark:|:heavy_check_mark:||
-[references](../../../../helpers/ddl/constraint/references/)|:heavy_check_mark:|:heavy_check_mark:||
+[columns](helpers\ddl\columns/)|:heavy_check_mark:|:heavy_check_mark:||
+[references](helpers\ddl\constraint\references/)|:heavy_check_mark:|:heavy_check_mark:||
 
 :bulb: **Example:**
 ```javascript

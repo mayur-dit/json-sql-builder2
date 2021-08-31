@@ -25,7 +25,8 @@ class cte extends SQLBuilder.SQLOperator {
 			}
 		});
 
-		this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('columns');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
 	}
 
 	link(query) {

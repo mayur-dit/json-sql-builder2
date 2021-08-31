@@ -31,14 +31,17 @@ class createTable extends SQLBuilder.SQLOperator {
 		this.$table = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 		this.$tablespace = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 
-		this.registerPrivateHelper('define');
+		// this.registerPrivateHelper('define');
+		this.registerPrivateHelperNew(require('./private/define/define').definition, 'define');
 
 		if (sql.isPostgreSQL() || sql.isSQLServer()) {
-			this.registerPrivateHelper('tableOptions');
+			// this.registerPrivateHelper('tableOptions');
+			this.registerPrivateHelperNew(require('./private/tableOptions/tableOptions').definition, 'tableOptions');
 		}
 
 		if (sql.isMySQL() || sql.isMariaDB()) {
-			this.registerPrivateHelper('options');
+			// this.registerPrivateHelper('options');
+			this.registerPrivateHelperNew(require('./private/options/options').definition, 'options');
 		}
 	}
 }

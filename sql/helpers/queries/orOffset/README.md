@@ -1,5 +1,5 @@
-# top Helper
-Specifies the `OFFSET` clause for the `SELECT` Statement for Oracle db only.
+# orOffset Helper
+Specifies the `OFFSET ${query} ROWS` clause for the `SELECT` Statement.
 
 #### Supported by
 - [Oracle](https://www.oracletutorial.com/oracle-basics/oracle-fetch/)
@@ -13,12 +13,12 @@ Usage of `orOffset` as **Number** with the following Syntax:
 **Syntax:**
 
 ```javascript
-$orOffset: 10 // it will fetch 10 rows only
+$orOffset: < Number >
 ```
 
 **SQL-Definition:**
-```sql
-OFFSET 10 ROWS
+```javascript
+<value>
 ```
 
 :bulb: **Example:**
@@ -27,7 +27,8 @@ function() {
     let query = sql.build({
         $select: {
             $orOffset: 10,
-            $from: 'people'
+            $from: 'Products',
+            $orderBy: 'ProductName'
         }
     });
 
@@ -38,9 +39,11 @@ function() {
 SELECT
     *
 FROM
-    people
-OFFSET 10 ROWS
+    Products
+ORDER BY
+    ProductName ASC OFFSET 10 ROWS
 
 // Values
 {}
 ```
+

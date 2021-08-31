@@ -1,27 +1,24 @@
-# top Helper
-Specifies the `FETCH` clause for the `SELECT` Statement.
+# ssFetch Helper
+Specifies the `OFFSET ${query.$skip} ROWS FETCH FIRST ${query.$fetch} ROWS ONLY` clause for the `SELECT` Statement.
 
 #### Supported by
 - [SQLServer](https://docs.microsoft.com/en-us/sql/t-sql/queries/top-transact-sql)
 
 # Allowed Types and Usage
 
-## as Number:
+## as Object:
 
-Usage of `ssFetch` as **Number** with the following Syntax:
+Usage of `ssFetch` as **Object** with the following Syntax:
 
 **Syntax:**
 
 ```javascript
-$ssFetch: {
-    $skip: 30, // it will skip 30 rows
-    $fetch: 10 // it will fetch next 10 rows
-}
+$ssFetch: { ... }
 ```
 
 **SQL-Definition:**
-```sql
-OFFSET 30 ROWS FETCH FIRST 10 ROWS ONLY
+```javascript
+<value>
 ```
 
 :bulb: **Example:**
@@ -29,11 +26,9 @@ OFFSET 30 ROWS FETCH FIRST 10 ROWS ONLY
 function() {
     let query = sql.build({
         $select: {
-            $ssFetch: {
-                $skip: 30,
-                $fetch: 10
-            },
-            $from: 'people'
+            $ssFetch: { $skip: 30, $fetch: 10 },
+            $from: 'Products',
+            $orderBy: 'ProductName'
         }
     });
 
@@ -44,9 +39,13 @@ function() {
 SELECT
     *
 FROM
-    people
-OFFSET 30 ROWS FETCH FIRST 10 ROWS ONLY
+    Products
+ORDER BY
+    ProductName ASC OFFSET 30 ROWS
+FETCH FIRST
+    10 ROWS ONLY
 
 // Values
 {}
 ```
+

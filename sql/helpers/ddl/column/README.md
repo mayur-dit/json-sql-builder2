@@ -45,11 +45,11 @@ Name|Required|Public|SQL-Definition|Supported by
 [notNull](./private/notNull/)|*optional*|*private*| NOT NULL [$notNull]|
 [default](./private/default/)|*optional*|*private*| DEFAULT  [$default]|
 [autoInc](./private/autoInc/)|*optional*|*private*| AUTO_INCREMENT [$autoInc]|`MySQL` `MariaDB` 
-[primary](../../../helpers/ddl/constraint/primary/)|*optional*|:heavy_check_mark:|  [$primary]|
-[unique](../../../helpers/ddl/constraint/unique/)|*optional*|:heavy_check_mark:|  [$unique]|
-[check](../../../helpers/ddl/constraint/check/)|*optional*|:heavy_check_mark:|  [$check]|
+[primary](helpers\ddl\constraint\primary/)|*optional*|:heavy_check_mark:|  [$primary]|
+[unique](helpers\ddl\constraint\unique/)|*optional*|:heavy_check_mark:|  [$unique]|
+[check](helpers\ddl\constraint\check/)|*optional*|:heavy_check_mark:|  [$check]|
 [comment](./private/comment/)|*optional*|*private*| COMMENT  [$comment]|`MySQL` `MariaDB` 
-[references](../../../helpers/ddl/constraint/references/)|*optional*|:heavy_check_mark:|  [$references]|
+[references](helpers\ddl\constraint\references/)|*optional*|:heavy_check_mark:|  [$references]|
 
 :bulb: **Example:**
 ```javascript

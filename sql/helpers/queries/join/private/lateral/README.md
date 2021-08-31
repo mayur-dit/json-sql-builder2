@@ -34,11 +34,11 @@ Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [cross](./private/cross/)|*optional*|*private*|CROSS JOIN LATERAL  [$cross]|
 [inner](./private/inner/)|*optional*|*private*|INNER JOIN LATERAL  [$inner]|
-[left](../../../../../helpers/functions/string/left/)|*optional*|:heavy_check_mark:|LEFT JOIN LATERAL  [$left]|
+[left](helpers\functions\string\left/)|*optional*|:heavy_check_mark:|LEFT JOIN LATERAL  [$left]|
 [right](./private/right/)|*optional*|*private*|RIGHT JOIN LATERAL  [$right]|
 [full](./private/full/)|*optional*|*private*|FULL JOIN LATERAL  [$full]|
 [on](./private/on/)|*optional*|*private*| ON  [$on]|
-[using](../../../../../helpers/queries/using/)|*optional*|:heavy_check_mark:| USING ( [$using])|
+[using](helpers\queries\using/)|*optional*|:heavy_check_mark:| USING ( [$using])|
 
 :bulb: **Example:**
 ```javascript

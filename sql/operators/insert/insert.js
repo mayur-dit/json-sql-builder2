@@ -24,12 +24,18 @@ class insert extends SQLBuilder.SQLOperator {
 
 		this.$table = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 
-		this.registerPrivateHelper('columns');
-		this.registerPrivateHelper('values');
-		this.registerPrivateHelper('records');
-		this.registerPrivateHelper('documents');
-		this.registerPrivateHelper('onDuplicateKeyUpdate');
-		this.registerPrivateHelper('onConflict');
+		// this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('values');
+		// this.registerPrivateHelper('records');
+		// this.registerPrivateHelper('documents');
+		// this.registerPrivateHelper('onDuplicateKeyUpdate');
+		// this.registerPrivateHelper('onConflict');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
+		this.registerPrivateHelperNew(require('./private/values/values').definition, 'values');
+		this.registerPrivateHelperNew(require('./private/records/records').definition, 'records');
+		this.registerPrivateHelperNew(require('./private/documents/documents').definition, 'documents');
+		this.registerPrivateHelperNew(require('./private/onDuplicateKeyUpdate/onDuplicateKeyUpdate').definition, 'onDuplicateKeyUpdate');
+		this.registerPrivateHelperNew(require('./private/onConflict/onConflict').definition, 'onConflict');
 	}
 }
 

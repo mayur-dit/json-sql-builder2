@@ -36,14 +36,20 @@ class join extends SQLBuilder.SQLHelper {
 			}
 		});
 
-		this.registerPrivateHelper('lateral');
-		this.registerPrivateHelper('cross');
-		this.registerPrivateHelper('inner');
-		this.registerPrivateHelper('left');
-		this.registerPrivateHelper('right');
-		this.registerPrivateHelper('full');
-
-		this.registerPrivateHelper('on');
+		// this.registerPrivateHelper('lateral');
+		// this.registerPrivateHelper('cross');
+		// this.registerPrivateHelper('inner');
+		// this.registerPrivateHelper('left');
+		// this.registerPrivateHelper('right');
+		// this.registerPrivateHelper('full');
+		// this.registerPrivateHelper('on');
+		this.registerPrivateHelperNew(require('./private/lateral/lateral').definition, 'lateral');
+		this.registerPrivateHelperNew(require('./private/cross/cross').definition, 'cross');
+		this.registerPrivateHelperNew(require('./private/inner/inner').definition, 'inner');
+		this.registerPrivateHelperNew(require('./private/left/left').definition, 'left');
+		this.registerPrivateHelperNew(require('./private/right/right').definition, 'right');
+		this.registerPrivateHelperNew(require('./private/full/full').definition, 'full');
+		this.registerPrivateHelperNew(require('./private/on/on').definition, 'on');
 
 		// Using will be used also by DELETE, so turn to public helper
 		//this.registerPrivateHelper('using');

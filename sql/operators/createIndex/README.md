@@ -39,17 +39,17 @@ CREATE{ UNIQUE[$unique]} INDEX
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[unique](../../helpers/ddl/constraint/unique/)|*optional*|:heavy_check_mark:| UNIQUE [$unique]|
+[unique](helpers\ddl\constraint\unique/)|*optional*|:heavy_check_mark:| UNIQUE [$unique]|
 [concurrently](./private/concurrently/)|*optional*|*private*| CONCURRENTLY [$concurrently]|`PostgreSQL` 
 [ine](./private/ine/)|*optional*|*private*| IF NOT EXISTS  [$ine]|
 [ifNotExists](./private/ifNotExists/)|*optional*|*private*| IF NOT EXISTS  [$ifNotExists]|
 [name](./private/name/)|*optional*|*private*|  [$name]|
 [table](./private/table/)|:heavy_check_mark:|*private*||
-[using](../../helpers/queries/using/)|*optional*|:heavy_check_mark:| USING  [$using]|`PostgreSQL` `MariaDB` `MySQL` 
-[columns](../../helpers/ddl/columns/)|:heavy_check_mark:|:heavy_check_mark:||
+[using](helpers\queries\using/)|*optional*|:heavy_check_mark:| USING  [$using]|`PostgreSQL` `MariaDB` `MySQL` 
+[columns](helpers\ddl\columns/)|:heavy_check_mark:|:heavy_check_mark:||
 [storageParameters](./private/storageParameters/)|*optional*|*private*| WITH ( [$storageParameters])|
 [tablespace](./private/tablespace/)|*optional*|*private*| TABLESPACE  [$tablespace]|`PostgreSQL` 
-[where](../../helpers/queries/where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
+[where](helpers\queries\where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
 
 :bulb: **Example:**
 ```javascript

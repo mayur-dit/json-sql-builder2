@@ -45,13 +45,13 @@ Name|Required|Public|SQL-Definition|Supported by
 [recursive](./private/recursive/)|*optional*|*private*| RECURSIVE [$recursive]|`PostgreSQL` 
 [ine](./private/ine/)|*optional*|*private*|IF NOT EXISTS [$ine] |`MariaDB` `SQLite` 
 [view](./private/view/)|:heavy_check_mark:|*private*||
-[columns](../../helpers/ddl/columns/)|*optional*|:heavy_check_mark:| ( [$columns])|
+[columns](helpers\ddl\columns/)|*optional*|:heavy_check_mark:| ( [$columns])|
 [securityBarrier](./private/securityBarrier/)|*optional*|*private*| WITH (security_barrier) [$securityBarrier]|`PostgreSQL` 
-[with](../../operators/with/)|*optional*|:heavy_check_mark:| [$with]|
-[select](../../operators/select/)|*optional*|:heavy_check_mark:| [$select]|
-[union](../../operators/union/)|*optional*|:heavy_check_mark:| [$union]|
-[intersect](../../operators/intersect/)|*optional*|:heavy_check_mark:| [$intersect]|
-[except](../../operators/except/)|*optional*|:heavy_check_mark:| [$except]|
+[with](operators\with/)|*optional*|:heavy_check_mark:| [$with]|
+[select](operators\select/)|*optional*|:heavy_check_mark:| [$select]|
+[union](operators\union/)|*optional*|:heavy_check_mark:| [$union]|
+[intersect](operators\intersect/)|*optional*|:heavy_check_mark:| [$intersect]|
+[except](operators\except/)|*optional*|:heavy_check_mark:| [$except]|
 [checkOption](./private/checkOption/)|*optional*|*private*||`PostgreSQL` `MariaDB` `MySQL` `SQLServer` `Oracle` 
 
 :bulb: **Example:**

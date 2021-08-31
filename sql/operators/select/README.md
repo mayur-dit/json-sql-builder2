@@ -36,6 +36,9 @@ SELECT
     { WITH ROLLUP[$withRollup]}-->(MariaDB,MySQL)
   { HAVING [$having]}
   { ORDER BY [$orderBy]}
+  { [$ssFetch]}-->(SQLServer)
+  { [$orOffset]}-->(Oracle)
+  { [$orFetch]}-->(Oracle)
   { LIMIT [$limit]}-->(MariaDB,MySQL,PostgreSQL,SQLite)
   { OFFSET [$offset]}-->(MariaDB,MySQL,PostgreSQL,SQLite)
 ```
@@ -44,20 +47,23 @@ SELECT
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[top](../../helpers/queries/top/)|*optional*|:heavy_check_mark:|  [$top]|`SQLServer` 
+[top](helpers\queries\top/)|*optional*|:heavy_check_mark:|  [$top]|`SQLServer` 
 [distinct](./private/distinct/)|*optional*|*private*| DISTINCT [$distinct]|
 [calcFoundRows](./private/calcFoundRows/)|*optional*|*private*| SQL_CALC_FOUND_ROWS [$calcFoundRows]|`MySQL` `MariaDB` 
-[columns](../../helpers/ddl/columns/)|:heavy_check_mark:|:heavy_check_mark:|  <$columns>|
+[columns](helpers\ddl\columns/)|:heavy_check_mark:|:heavy_check_mark:|  <$columns>|
 [into](./private/into/)|*optional*|*private*|  [$into]|`MySQL` `MariaDB` `SQLServer` 
-[from](../../helpers/queries/from/)|*optional*|:heavy_check_mark:| FROM  [$from]|
-[join](../../helpers/queries/join/)|*optional*|:heavy_check_mark:|  [$join]|
-[where](../../helpers/queries/where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
+[from](helpers\queries\from/)|*optional*|:heavy_check_mark:| FROM  [$from]|
+[join](helpers\queries\join/)|*optional*|:heavy_check_mark:|  [$join]|
+[where](helpers\queries\where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
 [groupBy](./private/groupBy/)|*optional*|*private*| GROUP BY  [$groupBy]|
 [withRollup](./private/withRollup/)|*optional*|*private*| WITH ROLLUP [$withRollup]|`MariaDB` `MySQL` 
 [having](./private/having/)|*optional*|*private*| HAVING  [$having]|
-[orderBy](../../helpers/queries/orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|
-[limit](../../helpers/queries/limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `PostgreSQL` `SQLite` 
-[offset](../../helpers/queries/offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `PostgreSQL` `SQLite` 
+[orderBy](helpers\queries\orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|
+[ssFetch](helpers\queries\ssFetch/)|*optional*|:heavy_check_mark:|  [$ssFetch]|`SQLServer` 
+[orOffset](helpers\queries\orOffset/)|*optional*|:heavy_check_mark:|  [$orOffset]|`Oracle` 
+[orFetch](helpers\queries\orFetch/)|*optional*|:heavy_check_mark:|  [$orFetch]|`Oracle` 
+[limit](helpers\queries\limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `PostgreSQL` `SQLite` 
+[offset](helpers\queries\offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `PostgreSQL` `SQLite` 
 
 :bulb: **Example:**
 ```javascript

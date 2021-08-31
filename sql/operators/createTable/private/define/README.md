@@ -43,8 +43,8 @@ $define: {
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[column](../../../../helpers/ddl/column/)|*optional*|:heavy_check_mark:||
-[constraint](../../../../helpers/ddl/constraint/)|*optional*|:heavy_check_mark:||
+[column](helpers\ddl\column/)|*optional*|:heavy_check_mark:||
+[constraint](helpers\ddl\constraint/)|*optional*|:heavy_check_mark:||
 
 :bulb: **Example:**
 ```javascript

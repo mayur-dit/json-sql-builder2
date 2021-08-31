@@ -36,7 +36,7 @@ REFERENCES <$table> (<$columns>)
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [table](./private/table/)|:heavy_check_mark:|*private*||
-[columns](../../../../helpers/ddl/columns/)|:heavy_check_mark:|:heavy_check_mark:||
+[columns](helpers\ddl\columns/)|:heavy_check_mark:|:heavy_check_mark:||
 [match](./private/match/)|*optional*|*private*| MATCH  [$match]|`MySQL` `PostgreSQL` 
 [onDelete](./private/onDelete/)|*optional*|*private*| ON DELETE  [$onDelete]|
 [onUpdate](./private/onUpdate/)|*optional*|*private*| ON UPDATE  [$onUpdate]|

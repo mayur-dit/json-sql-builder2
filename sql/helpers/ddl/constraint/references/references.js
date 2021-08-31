@@ -21,10 +21,13 @@ REFERENCES <$table> (<$columns>)
 			this.$notForReplication = new SQLBuilder.SQLPredefined.AcceptIfTrue(sql);
 		}
 
-		this.registerPrivateHelper('onDelete');
-		this.registerPrivateHelper('onUpdate');
+		// this.registerPrivateHelper('onDelete');
+		// this.registerPrivateHelper('onUpdate');
+		this.registerPrivateHelperNew(require('./private/onDelete/onDelete').definition, 'onDelete');
+		this.registerPrivateHelperNew(require('./private/onUpdate/onUpdate').definition, 'onUpdate');
 		if (sql.isPostgreSQL() || sql.isMySQL()) {
-			this.registerPrivateHelper('match');
+			// this.registerPrivateHelper('match');
+			this.registerPrivateHelperNew(require('./private/match/match').definition, 'match');
 		}
 	}
 }

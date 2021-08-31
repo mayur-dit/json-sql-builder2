@@ -110,7 +110,7 @@ UNIQUE (<$columns>)
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[columns](../../../../helpers/ddl/columns/)|:heavy_check_mark:|:heavy_check_mark:||
+[columns](helpers\ddl\columns/)|:heavy_check_mark:|:heavy_check_mark:||
 
 :bulb: **Example:**
 ```javascript

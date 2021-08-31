@@ -15,8 +15,10 @@ class $with extends SQLBuilder.SQLOperator {
 
 		this.$recursive = new SQLBuilder.SQLPredefined.AcceptIfTrue(sql);
 
-		this.registerPrivateHelper('cte');
-		this.registerPrivateHelper('query');
+		// this.registerPrivateHelper('cte');
+		// this.registerPrivateHelper('query');
+		this.registerPrivateHelperNew(require('./private/cte/cte').definition, 'cte');
+		this.registerPrivateHelperNew(require('./private/query/query').definition, 'query');
 	}
 }
 

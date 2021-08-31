@@ -14,8 +14,10 @@ class into extends SQLBuilder.SQLHelper {
 			typeDefinition.Array = { syntax: this.Syntax('INTO <value-ident>[ , ... ]') },
 			typeDefinition.Object = { syntax: this.Syntax('INTO{ OUTFILE [$outfile]}{ DUMPFILE [$dumpfile]}') }
 
-			this.registerPrivateHelper('outfile');
-			this.registerPrivateHelper('dumpfile');
+			// this.registerPrivateHelper('outfile');
+			// this.registerPrivateHelper('dumpfile');
+			this.registerPrivateHelperNew(require('./private/outfile/outfile').definition, 'outfile');
+			this.registerPrivateHelperNew(require('./private/dumpfile/dumpfile').definition, 'dumpfile');
 		}
 		this.Types(typeDefinition);
 	}

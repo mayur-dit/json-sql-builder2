@@ -41,7 +41,8 @@ class onConflict extends SQLBuilder.SQLHelper {
 		this.$onConstraint = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 		this.$doUpdateSet = new SetHelper(sql);
 
-		this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('columns');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
 	}
 }
 

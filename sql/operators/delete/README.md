@@ -39,14 +39,14 @@ DELETE{ [$table]}-->(MariaDB,MySQL,SQLServer)
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [table](./private/table/)|*optional*|*private*|  [$table]|`MariaDB` `MySQL` `SQLServer` 
-[from](../../helpers/queries/from/)|:heavy_check_mark:|:heavy_check_mark:| FROM  <$from>|
-[join](../../helpers/queries/join/)|*optional*|:heavy_check_mark:|  [$join]|`MariaDB` `MySQL` `SQLServer` 
-[using](../../helpers/queries/using/)|*optional*|:heavy_check_mark:| USING  [$using]|`PostgreSQL` 
-[where](../../helpers/queries/where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
-[orderBy](../../helpers/queries/orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|`MariaDB` `MySQL` `SQLite` 
-[limit](../../helpers/queries/limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `SQLite` 
-[offset](../../helpers/queries/offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `SQLite` 
-[returning](../../helpers/queries/returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`Oracle` `PostgreSQL` `MariaDB` 
+[from](helpers\queries\from/)|:heavy_check_mark:|:heavy_check_mark:| FROM  <$from>|
+[join](helpers\queries\join/)|*optional*|:heavy_check_mark:|  [$join]|`MariaDB` `MySQL` `SQLServer` 
+[using](helpers\queries\using/)|*optional*|:heavy_check_mark:| USING  [$using]|`PostgreSQL` 
+[where](helpers\queries\where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
+[orderBy](helpers\queries\orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|`MariaDB` `MySQL` `SQLite` 
+[limit](helpers\queries\limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `SQLite` 
+[offset](helpers\queries\offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `SQLite` 
+[returning](helpers\queries\returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`Oracle` `PostgreSQL` `MariaDB` 
 
 :bulb: **Example:**
 ```javascript

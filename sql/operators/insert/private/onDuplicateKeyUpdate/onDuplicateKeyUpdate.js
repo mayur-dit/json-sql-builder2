@@ -14,7 +14,8 @@ class onDuplicateKeyUpdate extends SQLBuilder.SQLHelper {
 			}
 		});
 
-		this.registerPrivateHelper('values');
+		// this.registerPrivateHelper('values');
+		this.registerPrivateHelperNew(require('./private/values/values').definition, 'values');
 	}
 }
 

@@ -15,8 +15,10 @@ class returning extends SQLBuilder.SQLHelper {
 			String: { syntax: this.Syntax('<value-ident>') }
 		});
 
-		this.registerPrivateHelper('columns');
-		this.registerPrivateHelper('into');
+		// this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('into');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
+		this.registerPrivateHelperNew(require('./private/into/into').definition, 'into');
 	}
 
 	link(query) {

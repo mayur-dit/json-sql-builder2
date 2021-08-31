@@ -31,9 +31,12 @@ class createIndex extends SQLBuilder.SQLOperator {
 		this.$table = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 		this.$tablespace = new SQLBuilder.SQLPredefined.StringIdentifier(sql);
 
-		this.registerPrivateHelper('using');
-		this.registerPrivateHelper('columns');
-		this.registerPrivateHelper('storageParameters');
+		// this.registerPrivateHelper('using');
+		// this.registerPrivateHelper('columns');
+		// this.registerPrivateHelper('storageParameters');
+		this.registerPrivateHelperNew(require('./private/using/using').definition, 'using');
+		this.registerPrivateHelperNew(require('./private/columns/columns').definition, 'columns');
+		this.registerPrivateHelperNew(require('./private/storageParameters/storageParameters').definition, 'storageParameters');
 	}
 }
 

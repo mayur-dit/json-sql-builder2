@@ -94,7 +94,7 @@ $onDuplicateKeyUpdate: {
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [values](./private/values/)|*optional*|*private*||
-[select](../../../../operators/select/)|*optional*|:heavy_check_mark:||
+[select](operators\select/)|*optional*|:heavy_check_mark:||
 
 :bulb: **Example:**
 ```javascript

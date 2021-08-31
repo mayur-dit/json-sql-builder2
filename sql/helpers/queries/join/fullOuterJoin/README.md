@@ -32,9 +32,9 @@ Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
 [lateral](./private/lateral/)|*optional*|*private*| LATERAL [$lateral]|`PostgreSQL` 
 [table](./private/table/)|*optional*|*private*|  [$table]|
-[select](../../../../operators/select/)|*optional*|:heavy_check_mark:|  [$select]|
+[select](operators\select/)|*optional*|:heavy_check_mark:|  [$select]|
 [on](./private/on/)|*optional*|*private*| ON  [$on]|
-[using](../../../../helpers/queries/using/)|*optional*|:heavy_check_mark:| USING  [$using]|
+[using](helpers\queries\using/)|*optional*|:heavy_check_mark:| USING  [$using]|
 
 :bulb: **Example:**
 ```javascript

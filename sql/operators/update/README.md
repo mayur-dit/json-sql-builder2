@@ -37,16 +37,16 @@ UPDATE  { [$top]}-->(SQLServer){ <$table>}
 
 Name|Required|Public|SQL-Definition|Supported by
 :---|:------:|:----:|:-------------|:-----------
-[top](../../helpers/queries/top/)|*optional*|:heavy_check_mark:|  [$top]|`SQLServer` 
+[top](helpers\queries\top/)|*optional*|:heavy_check_mark:|  [$top]|`SQLServer` 
 [table](./private/table/)|:heavy_check_mark:|*private*|  <$table>|
 [set](./private/set/)|*optional*|*private*| SET  [$set]|
-[from](../../helpers/queries/from/)|*optional*|:heavy_check_mark:| FROM  [$from]|
-[join](../../helpers/queries/join/)|*optional*|:heavy_check_mark:|  [$join]|
-[where](../../helpers/queries/where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
-[orderBy](../../helpers/queries/orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|`MariaDB` `MySQL` `SQLite` 
-[limit](../../helpers/queries/limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `SQLite` 
-[offset](../../helpers/queries/offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `SQLite` 
-[returning](../../helpers/queries/returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`PostgreSQL` `Oracle` `MariaDB` 
+[from](helpers\queries\from/)|*optional*|:heavy_check_mark:| FROM  [$from]|
+[join](helpers\queries\join/)|*optional*|:heavy_check_mark:|  [$join]|
+[where](helpers\queries\where/)|*optional*|:heavy_check_mark:| WHERE  [$where]|
+[orderBy](helpers\queries\orderBy/)|*optional*|:heavy_check_mark:| ORDER BY  [$orderBy]|`MariaDB` `MySQL` `SQLite` 
+[limit](helpers\queries\limit/)|*optional*|:heavy_check_mark:| LIMIT  [$limit]|`MariaDB` `MySQL` `SQLite` 
+[offset](helpers\queries\offset/)|*optional*|:heavy_check_mark:| OFFSET  [$offset]|`MariaDB` `MySQL` `SQLite` 
+[returning](helpers\queries\returning/)|*optional*|:heavy_check_mark:| RETURNING  [$returning]|`PostgreSQL` `Oracle` `MariaDB` 
 
 :bulb: **Example:**
 ```javascript

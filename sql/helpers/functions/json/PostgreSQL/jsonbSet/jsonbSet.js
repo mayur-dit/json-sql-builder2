@@ -13,8 +13,10 @@ class jsonbSet extends SQLBuilder.SQLOperator {
 		//this.$target = new SQLBuilder.SQLPredefined.Expression(sql);
 		this.$path = new SQLBuilder.SQLPredefined.StringValueParam(sql);
 
-		this.registerPrivateHelper('target');
-		this.registerPrivateHelper('value');
+		// this.registerPrivateHelper('target');
+		// this.registerPrivateHelper('value');
+		this.registerPrivateHelperNew(require('./private/target/target').definition, 'target');
+		this.registerPrivateHelperNew(require('./private/value/value').definition, 'value');
 	}
 }
 

@@ -34,9 +34,12 @@ class groupBy extends SQLBuilder.SQLHelper {
 		if (sql.isSQLServer() || sql.isPostgreSQL() || sql.isOracle()) {
 			definedTypes.Object.eachItemOf.Object = { syntax: this.Syntax('{ROLLUP ([$rollup])}{CUBE ([$cube])}{GROUPING SETS ([$groupingSets])}[ , ... ]') };
 
-			this.registerPrivateHelper('rollup');
-			this.registerPrivateHelper('cube');
-			this.registerPrivateHelper('groupingSets');
+			// this.registerPrivateHelper('rollup');
+			// this.registerPrivateHelper('cube');
+			// this.registerPrivateHelper('groupingSets');
+			this.registerPrivateHelperNew(require('./private/rollup/rollup').definition, 'rollup');
+			this.registerPrivateHelperNew(require('./private/cube/cube').definition, 'cube');
+			this.registerPrivateHelperNew(require('./private/groupingSets/groupingSets').definition, 'groupingSets');
 		}
 
 		this.Types(definedTypes);

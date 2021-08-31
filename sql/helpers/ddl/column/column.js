@@ -26,9 +26,12 @@ class column extends SQLBuilder.SQLHelper {
 		this.$autoInc = new SQLBuilder.SQLPredefined.AcceptIfTrue(sql);
 		this.$comment = new SQLBuilder.SQLPredefined.StringValueParam(sql);
 
-		this.registerPrivateHelper('type');
-		this.registerPrivateHelper('size');
-		this.registerPrivateHelper('default');
+		// this.registerPrivateHelper('type');
+		// this.registerPrivateHelper('size');
+		// this.registerPrivateHelper('default');
+		this.registerPrivateHelperNew(require('./private/type/type').definition, 'type');
+		this.registerPrivateHelperNew(require('./private/size/size').definition, 'size');
+		this.registerPrivateHelperNew(require('./private/default/default').definition, 'default');
 	}
 }
 

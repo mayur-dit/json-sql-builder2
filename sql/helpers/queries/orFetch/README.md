@@ -1,5 +1,5 @@
-# top Helper
-Specifies the `FETCH` clause for the `SELECT` Statement for Oracle db only.
+# orFetch Helper
+Specifies the `FETCH NEXT ${query} ROWS ONLY` clause for the `SELECT` Statement.
 
 #### Supported by
 - [Oracle](https://www.oracletutorial.com/oracle-basics/oracle-fetch/)
@@ -8,17 +8,17 @@ Specifies the `FETCH` clause for the `SELECT` Statement for Oracle db only.
 
 ## as Number:
 
-Usage of `ssFetch` as **Number** with the following Syntax:
+Usage of `orFetch` as **Number** with the following Syntax:
 
 **Syntax:**
 
 ```javascript
-$orFetch: 10 // it will fetch 10 rows only
+$orFetch: < Number >
 ```
 
 **SQL-Definition:**
-```sql
-FETCH NEXT 15 ROWS ONLY
+```javascript
+<value>
 ```
 
 :bulb: **Example:**
@@ -27,7 +27,8 @@ function() {
     let query = sql.build({
         $select: {
             $orFetch: 10,
-            $from: 'people'
+            $from: 'Products',
+            $orderBy: 'ProductName'
         }
     });
 
@@ -38,9 +39,11 @@ function() {
 SELECT
     *
 FROM
-    people
-FETCH NEXT 10 ROWS ONLY
+    Products
+ORDER BY
+    ProductName ASC FETCH NEXT 10 ROWS ONLY
 
 // Values
 {}
 ```
+
