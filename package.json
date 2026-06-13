@@ -40,13 +40,5 @@
     "eslint": "^4.19.1",
     "js-beautify": "^1.10.0",
     "sql-formatter": "^2.3.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/planetarydev/json-sql-builder2.git"
-  },
-  "bugs": {
-    "url": "https://github.com/planetarydev/json-sql-builder2/issues"
-  },
-  "homepage": "https://github.com/planetarydev/json-sql-builde2r#readme"
+  }
 }
