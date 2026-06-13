@@ -1,5 +1,5 @@
 {
-  "name": "json-sql-builder2",
+  "name": "@sava-info-systems/json-sql-builder2",
   "version": "1.0.23",
   "description": "Query Builder to translate JSON dataformat a SQL.",
   "main": "index.js",
@@ -28,7 +28,7 @@
     "translate",
     "query"
   ],
-  "author": "planetarydev",
+  "author": "SAVA INFO SYSTEMS PRIVATE LIMITED",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.14"
