@@ -1,6 +1,7 @@
 {
   "name": "@sava-info-systems/json-sql-builder2",
   "version": "1.0.23",
+  "access": "public",
   "description": "Query Builder to translate JSON dataformat a SQL.",
   "main": "index.js",
   "scripts": {
